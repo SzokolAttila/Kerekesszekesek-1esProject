@@ -7,7 +7,10 @@ class ThirdPoint extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Color(0xff694873),
         centerTitle: true,
-        title: const Text('Attila'),
+        title: const Text('Attila',
+          style: TextStyle(color: Color(0xffd9d9d9)),
+        ),
+
       ),
       body: SafeArea(
       child: Container(
@@ -27,6 +30,7 @@ class ThirdPoint extends StatelessWidget {
                 padding: EdgeInsets.only(bottom: 20),
               ),
               Card(
+                color: Color(0xffD9D9D9),
                 child: SizedBox(
                   width: 300,
                   height: 120,
@@ -43,7 +47,7 @@ class ThirdPoint extends StatelessWidget {
                 ),
               ),
                 elevation: 20,
-                shadowColor: Colors.black,
+                shadowColor: Color(0xff7F7CAF),
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
               ),
               Padding(padding: EdgeInsets.symmetric(
@@ -59,6 +63,7 @@ class ThirdPoint extends StatelessWidget {
                 padding: EdgeInsets.only(bottom: 20),
               ),
               Card(
+                color: Color(0xffD9D9D9),
                 child: SizedBox(
                   width: 300,
                   height: 120,
@@ -75,8 +80,38 @@ class ThirdPoint extends StatelessWidget {
                   ),
                 ),
                 elevation: 20,
-                shadowColor: Colors.black,
+                shadowColor: Color(0xff7F7CAF),
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+              ),
+              Padding(padding: EdgeInsets.only(
+                top: 155
+                ),
+              ),
+              Container(
+                width: double.infinity,
+                  height: 40,
+                  color: Color(0xff694873),
+                  child: Center(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                      Icon(
+                        color: Color(0xffd9d9d9),
+                        IconData(0xe198, fontFamily: 'MaterialIcons')
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(
+                          right: 10
+                        ),
+                      ),
+                      Text(
+                      "Copyright 2022 Kerekesszékesek",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(color: Color(0xffD9d9d9)),
+                      ),
+                      ]
+                    )
+                  )
               )
             ],
           ),
