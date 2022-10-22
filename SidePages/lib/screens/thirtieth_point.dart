@@ -1,10 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:side_pages/screens/third_point.dart';
-import 'package:side_pages/screens/twelfth_point.dart';
+import 'package:side_pages/screens/twentyseventh_point.dart';
 
-class SeventhPoint extends StatelessWidget {
+class ThirtiethPoint extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
@@ -18,13 +17,9 @@ class SeventhPoint extends StatelessWidget {
         automaticallyImplyLeading: false,
         actions: [
           IconButton(onPressed: (){
-            Navigator.of(context).push(MaterialPageRoute(builder: (context) => ThirdPoint()));
+            Navigator.of(context).push(MaterialPageRoute(builder: (context) => TwentyseventhPoint()));
           }, icon: Icon(Icons.arrow_back, color: Color(0xffd9d9d9))),
-          Padding(padding: EdgeInsets.only(right: 20)),
-          IconButton(onPressed: (){
-            Navigator.of(context).push(MaterialPageRoute(builder: (context) => TwelfthPoint()));
-          }, icon: Icon(Icons.arrow_forward, color: Color(0xffd9d9d9))),
-          Padding(padding: EdgeInsets.only(right: 15),)
+          Padding(padding: EdgeInsets.only(right: 15))
         ],
       ),
       body: SafeArea(
@@ -38,7 +33,7 @@ class SeventhPoint extends StatelessWidget {
                       vertical: 24.0
                   )),
                   Text(
-                    "7. cikk\n - A törvény előtti egyenlőség joga",
+                    "30. cikk - A 'jogok betartásának' joga",
                     style: GoogleFonts.kottaOne(color: Color(0xffd9d9d9)),
                     textAlign: TextAlign.center,
                     textScaleFactor: 2.0,
@@ -50,12 +45,12 @@ class SeventhPoint extends StatelessWidget {
                     color: Color(0xff7F7CAF),
                     child: SizedBox(
                       width: 300,
-                      height: 190,
+                      height: 180,
                       child: Center(
                         child: Padding(
                           padding: EdgeInsets.all(15),
                           child: Text(
-                            "A törvény előtt mindenki egyenlő, és minden megkülönböztetés nélkül joga van a törvény egyenlő védelméhez. Mindenkit egyenlő védelem illet meg a jelen Nyilatkozatot sértő minden megkülönböztetéssel és minden ilyen megkülönböztetésre irányuló felbujtással szemben.",
+                            "A jelen Nyilatkozat egyetlen rendelkezése sem értelmezhető úgy, hogy az valamely állam, csoport vagy egyén részére jogot adna arra, hogy az itt kinyilvánított jogok és szabadságok megsértésére irányuló tevékenységet fejtsen ki, vagy ilyen cselekményt elkövessen.",
                             textAlign: TextAlign.center,
                             textScaleFactor: 1.1,
                             style: GoogleFonts.kottaOne(fontStyle: FontStyle.italic,
@@ -85,12 +80,12 @@ class SeventhPoint extends StatelessWidget {
                     color: Color(0xff7F7CAF),
                     child: SizedBox(
                       width: 300,
-                      height: 120,
+                      height: 130,
                       child: Center(
                         child: Padding(
                           padding: EdgeInsets.all(15),
                           child: Text(
-                            "Azért választottuk ezt a jogot, mert a csapatunk fontosnak tartja azt, hogy bárki bármilyen előítélet nélkül, jogi ügyben igazságosan el tudjon járni.",
+                            "Azért választottuk ezt a jogot, mert jelentős dolog az, hogy senki se álljon a törvény felett, vagy másik embertársai felett, így büntetés nélkül ne foszthassa meg őt az alapvető jogaitól.",
                             textAlign: TextAlign.center,
                             textScaleFactor: 1.1,
                             style: GoogleFonts.kottaOne(fontStyle: FontStyle.italic,
@@ -114,7 +109,7 @@ class SeventhPoint extends StatelessWidget {
                       child: Center(
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(20),
-                          child: Image.asset('assets/image/7.jpg'),
+                          child: Image.asset('assets/image/30.jpg'),
                         ),
                       ),
                     ),

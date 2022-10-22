@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:side_pages/screens/third_point.dart';
-import 'package:side_pages/screens/twelfth_point.dart';
+import 'package:side_pages/screens/eighteenth_point.dart';
+import 'package:side_pages/screens/twentyfourth_point.dart';
 
-class SeventhPoint extends StatelessWidget {
+class NineteenthPoint extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
@@ -18,11 +18,11 @@ class SeventhPoint extends StatelessWidget {
         automaticallyImplyLeading: false,
         actions: [
           IconButton(onPressed: (){
-            Navigator.of(context).push(MaterialPageRoute(builder: (context) => ThirdPoint()));
+            Navigator.of(context).push(MaterialPageRoute(builder: (context) => EighteenthPoint()));
           }, icon: Icon(Icons.arrow_back, color: Color(0xffd9d9d9))),
           Padding(padding: EdgeInsets.only(right: 20)),
           IconButton(onPressed: (){
-            Navigator.of(context).push(MaterialPageRoute(builder: (context) => TwelfthPoint()));
+            Navigator.of(context).push(MaterialPageRoute(builder: (context) => TwentyfourthPoint()));
           }, icon: Icon(Icons.arrow_forward, color: Color(0xffd9d9d9))),
           Padding(padding: EdgeInsets.only(right: 15),)
         ],
@@ -38,7 +38,7 @@ class SeventhPoint extends StatelessWidget {
                       vertical: 24.0
                   )),
                   Text(
-                    "7. cikk\n - A törvény előtti egyenlőség joga",
+                    "19. cikk - A szólásszabadság joga",
                     style: GoogleFonts.kottaOne(color: Color(0xffd9d9d9)),
                     textAlign: TextAlign.center,
                     textScaleFactor: 2.0,
@@ -50,12 +50,12 @@ class SeventhPoint extends StatelessWidget {
                     color: Color(0xff7F7CAF),
                     child: SizedBox(
                       width: 300,
-                      height: 190,
+                      height: 210,
                       child: Center(
                         child: Padding(
                           padding: EdgeInsets.all(15),
                           child: Text(
-                            "A törvény előtt mindenki egyenlő, és minden megkülönböztetés nélkül joga van a törvény egyenlő védelméhez. Mindenkit egyenlő védelem illet meg a jelen Nyilatkozatot sértő minden megkülönböztetéssel és minden ilyen megkülönböztetésre irányuló felbujtással szemben.",
+                            "Minden személynek joga van a vélemény és a kifejezés szabadságához, amely magában foglalja azt a jogot, hogy véleménye miatt ne szenvedjen zaklatást, és hogy határokra való tekintet nélkül kutathasson, tájékozódhasson és terjeszthessen információkat és eszméket bármilyen kifejezési módon.",
                             textAlign: TextAlign.center,
                             textScaleFactor: 1.1,
                             style: GoogleFonts.kottaOne(fontStyle: FontStyle.italic,
@@ -85,12 +85,12 @@ class SeventhPoint extends StatelessWidget {
                     color: Color(0xff7F7CAF),
                     child: SizedBox(
                       width: 300,
-                      height: 120,
+                      height: 150,
                       child: Center(
                         child: Padding(
                           padding: EdgeInsets.all(15),
                           child: Text(
-                            "Azért választottuk ezt a jogot, mert a csapatunk fontosnak tartja azt, hogy bárki bármilyen előítélet nélkül, jogi ügyben igazságosan el tudjon járni.",
+                            "Az ok, amiért ezt a jogot választottuk, az az, hogy minden ember megérdemli, hogy nap-mint-nap kifejezze a saját gondolatait, érzelmeit, véleményét, és azt szabadon megtehesse bármilyen ezért történő bűntetés nélkül.",
                             textAlign: TextAlign.center,
                             textScaleFactor: 1.1,
                             style: GoogleFonts.kottaOne(fontStyle: FontStyle.italic,
@@ -114,7 +114,7 @@ class SeventhPoint extends StatelessWidget {
                       child: Center(
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(20),
-                          child: Image.asset('assets/image/7.jpg'),
+                          child: Image.asset('assets/image/19.jpg'),
                         ),
                       ),
                     ),

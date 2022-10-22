@@ -31,7 +31,7 @@ class ThirdPoint extends StatelessWidget {
                   vertical: 24.0
               )),
               Text(
-                  "3. pont - Az élet joga",
+                  "3. cikk - Az élet joga",
                 style: GoogleFonts.kottaOne(color: Color(0xffd9d9d9)),
                 textAlign: TextAlign.center,
                 textScaleFactor: 2.0,
@@ -111,6 +111,8 @@ class ThirdPoint extends StatelessWidget {
                     ),
                   ),
                 ),
+                elevation: 20,
+                shadowColor: Color(0xff7F7CAF),
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
               ),
               Padding(padding: EdgeInsets.only(
