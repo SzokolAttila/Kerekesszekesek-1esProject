@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:side_pages/screens/seventh_point.dart';
 
 class ThirdPoint extends StatelessWidget {
   @override
@@ -7,15 +9,22 @@ class ThirdPoint extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Color(0xff694873),
         centerTitle: true,
-        title: const Text('Attila',
-          style: TextStyle(color: Color(0xffd9d9d9)),
+        title: Text('Attila',
+          style: GoogleFonts.inter(color: Color(0xffd9d9d9)),
         ),
-
+        automaticallyImplyLeading: false,
+        actions: [
+          IconButton(onPressed: (){
+            Navigator.of(context).push(MaterialPageRoute(builder: (context) => SeventhPoint()));
+          }, icon: Icon(Icons.arrow_forward , color: Color(0xffd9d9d9))),
+          Padding(padding: EdgeInsets.only(right: 15),)
+        ],
       ),
       body: SafeArea(
       child: Container(
-        child: Center(
-          child: Column(
+        child: ListView(
+          children: [Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Padding(padding: EdgeInsets.symmetric(
                   horizontal: 32.0,
@@ -23,6 +32,7 @@ class ThirdPoint extends StatelessWidget {
               )),
               Text(
                   "3. pont - Az élet joga",
+                style: GoogleFonts.kottaOne(color: Color(0xffd9d9d9)),
                 textAlign: TextAlign.center,
                 textScaleFactor: 2.0,
               ),
@@ -30,7 +40,7 @@ class ThirdPoint extends StatelessWidget {
                 padding: EdgeInsets.only(bottom: 20),
               ),
               Card(
-                color: Color(0xffD9D9D9),
+                color: Color(0xff7F7CAF),
                 child: SizedBox(
                   width: 300,
                   height: 120,
@@ -41,7 +51,8 @@ class ThirdPoint extends StatelessWidget {
                     "Minden személynek joga van az élethez, a szabadsághoz és a személyi biztonsághoz.",
                     textAlign: TextAlign.center,
                     textScaleFactor: 1.1,
-                      style: TextStyle(fontStyle: FontStyle.italic),
+                      style: GoogleFonts.kottaOne(fontStyle: FontStyle.italic,
+                                        color: Color(0xffD9D9D9)),
                     ),
                   ),
                 ),
@@ -56,6 +67,7 @@ class ThirdPoint extends StatelessWidget {
               )),
               Text(
                 "Miért választottuk?",
+                style: GoogleFonts.kottaOne(color: Color(0xffd9d9d9)),
                 textAlign: TextAlign.center,
                 textScaleFactor: 2.0,
               ),
@@ -63,7 +75,7 @@ class ThirdPoint extends StatelessWidget {
                 padding: EdgeInsets.only(bottom: 20),
               ),
               Card(
-                color: Color(0xffD9D9D9),
+                color: Color(0xff7F7CAF),
                 child: SizedBox(
                   width: 300,
                   height: 120,
@@ -71,10 +83,11 @@ class ThirdPoint extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.all(15),
                       child: Text(
-                        "Azért választottuk ezt a jogot, mert ez az egyik legalapvetőbb jog, ",
+                        "Azért választottuk ezt a jogot, mert ez az egyik legalapvetőbb jog, és mondhatni a legfontosabb, hiszen ha ez a jog nem teljesül, akkor a többi sem fog. ",
                         textAlign: TextAlign.center,
                         textScaleFactor: 1.1,
-                        style: TextStyle(fontStyle: FontStyle.italic),
+                        style: GoogleFonts.kottaOne(fontStyle: FontStyle.italic,
+                                          color: Color(0xffD9D9D9)),
                       ),
                     ),
                   ),
@@ -83,8 +96,25 @@ class ThirdPoint extends StatelessWidget {
                 shadowColor: Color(0xff7F7CAF),
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
               ),
+              Padding(
+                padding: EdgeInsets.only(
+                    bottom: 40
+                ),
+              ),
+              Card(
+                child: SizedBox(
+                  width: 300,
+                  child: Center(
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: Image.asset('assets/image/3.jpg'),
+                    ),
+                  ),
+                ),
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+              ),
               Padding(padding: EdgeInsets.only(
-                top: 155
+                top: 20
                 ),
               ),
               Container(
@@ -107,14 +137,14 @@ class ThirdPoint extends StatelessWidget {
                       Text(
                       "Copyright 2022 Kerekesszékesek",
                       textAlign: TextAlign.center,
-                      style: TextStyle(color: Color(0xffD9d9d9)),
+                      style: GoogleFonts.inter(color: Color(0xffD9d9d9)),
                       ),
                       ]
                     )
                   )
               )
             ],
-          ),
+          ),]
         ),
         ),
       ),
