@@ -8,7 +8,8 @@ import 'package:auth_screen/register.dart';
 import 'package:auth_screen/loading.dart';
 import 'package:get/get.dart';
 
-void main(){
+void main() async{
+
   runApp(MyApp());
 }
 
