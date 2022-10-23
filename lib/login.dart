@@ -4,6 +4,7 @@ import 'package:auth_screen/home.dart';
 import 'package:auth_screen/login.dart';
 import 'package:auth_screen/register.dart';
 import 'package:auth_screen/loading.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
 class Login extends StatefulWidget {
@@ -14,95 +15,109 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
-  String? emailAdress = "";
-  String? password = "";
-  final TextEditingController emailAdressController = TextEditingController();
+
+  final TextEditingController emailAddressController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
+        backgroundColor: Color(0xFF7F7CAF),
+        body: SafeArea(
+          child: Center(
+            child: Container(
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(8.0),
+              ),
+              padding: const EdgeInsets.all(40.0),
 
-        child: Center(
-
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Column(
-              children: [
-                Text("Bejelentkezés", style: TextStyle(fontSize: 66),),
-                Form(child: Container(
-                  margin: EdgeInsets.all(100.0),
-                  decoration: BoxDecoration(
-                
-                    borderRadius: BorderRadius.circular(10)
-                  ),
-                  child: TextFormField(
-                    decoration: InputDecoration(
-                      labelText: "Email cím",
-                      focusColor: Colors.purple,
-                      hoverColor: Colors.purple,
-
-                      enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
-                      borderSide: const BorderSide(
-                      width: 1,
-                      color: Colors.purple,
-                      ),
-                      ),
+              width: MediaQuery.of(context).size.width * 0.35,
+              // height: MediaQuery.of(context).size.height * 0.50,
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    Text(
+                      "Bejelentkezés",
+                      style: TextStyle(fontSize: 66),
                     ),
-                    controller: emailAdressController,
-                    keyboardType: TextInputType.name,
-                    onSaved: (value){
-                      emailAdressController.text = value!;
-                    },
-                  ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Form(child: Column(
+                      children: [
+                        TextFormField(
+                          decoration: InputDecoration(
+                            label: Text("Email Cím", textAlign: TextAlign.center,),
+                            fillColor: Color(0xFFD9D9D9),
+                            filled: true,
+                            border: OutlineInputBorder(borderRadius: BorderRadius.circular(20.0), borderSide: BorderSide.none),
 
-                )
 
-                ),
-                Form(child: Container(
-                  margin: EdgeInsets.all(100.0),
-                  decoration: BoxDecoration(
+                          ),
 
-                      borderRadius: BorderRadius.circular(10)
-                  ),
-                  child: TextFormField(
-                    decoration: InputDecoration(
-                      labelText: "Jelszó",
-                      focusColor: Colors.purple,
-                      hoverColor: Colors.purple,
-                      enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        borderSide: const BorderSide(
-                          width: 1,
-                          color: Colors.purple,
+
+                          controller: emailAddressController,
+
                         ),
-                      ),
+
+
+                        SizedBox(
+                          height: 10,
+                        ),
+                        TextFormField(
+                          decoration: InputDecoration(
+                            label: Text("Jelszó", textAlign: TextAlign.center,),
+                            fillColor: Color(0xFFD9D9D9),
+                            filled: true,
+                            border: OutlineInputBorder(borderRadius: BorderRadius.circular(20.0), borderSide: BorderSide.none),
+
+
+                          ),
+                          controller: passwordController,
+
+                          obscureText: true,
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+
+
+                      ],
+                    )
                     ),
-                    controller: passwordController,
-                    keyboardType: TextInputType.name,
-                    onSaved: (value){
-                      passwordController.text = value!;
-                    },
-                  ),
 
-                )
+                    ElevatedButton(
+                        style: ButtonStyle(
+                          padding: MaterialStateProperty.all(EdgeInsets.all(16.0)),
+                          backgroundColor: MaterialStateProperty.all(Color(0xFF7F7CAF)),
 
+                        ),
+                        onPressed: () {
+                          setState(()
+                          {
+                          }
+                          );
+                        },
+                        child: Text(
+                          "Bejelentkezés!",
+                        )
+                    ),
+                    TextButton(onPressed: (){Get.to(Register());}, child: Text("Még nincs fiókja? Hozza létre!")),
+
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Container(
+                        width: 500,
+                        height: 250,
+                        child: SvgPicture.asset("assets/login_register.svg")
+                    ),
+                  ],
                 ),
-                TextButton(onPressed: (){
-                  setState(() {
-                    emailAdress = emailAdressController.text;
-                    password = passwordController.text;
-                  });
-                }, child: Text("Bejelentkezés",) ),
-                Text("Email: $emailAdress\nJelszó: $password"),
-              ],
+              ),
             ),
           ),
-        ),
-      )
-
-    );
+        ));
   }
 }
